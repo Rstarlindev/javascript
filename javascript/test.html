@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button onclick="getShortMessage()"> Array </button>
+<p id="test"></p>
+
+
+<script type="text/javascript">
+
+	Array.prototype.mycase = function() {
+  var i;
+  for (i = 0; i < this.lenght; i++) {
+    this[i] = this[i].toUpperCase();
+  }
+};
+
+function getShortMessage() {
+  var message = ["alert","erreur", "warning","danger"];
+  message.mycase();
+  document.getElementById("test").innerHTML = message;
+}
+
+</script>
+</body>
+</html>
